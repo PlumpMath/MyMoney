@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pt" ng-app>
+<html lang="pt" ng-app="myMoneyApp">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,56 +8,30 @@
 <title>My Money</title>
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
 <!-- AngularJS -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="js/controllers.js"></script>
 </head>
 
-<body>
+<body ng-controller="TipoGastoListCtrl">
 	<div class="container">
 		<h2>
-			Tipos de gasto <span class="label label-default">5</span>
+			Tipos de gasto <span class="label label-default">{{tipos.length}}</span>
 		</h2>
 
-		<dl>
-			<dt>Alimentação</dt>
-			<dd>Gastos diretos com alimentação. Por exemplo, restaurantes para almoçar e jantar
-				diariamente.</dd>
-			<dd>Restaurantes para diversão e ingredientes comprados no supermercado não entram aqui.</dd>
-		</dl>
-		<dl>
-			<dt>Casa</dt>
-			<dd>Gastos para habitar a moradia. Por exemplo, aluguel, produtos de limpeza e produtos de
-				higiene pessoal.</dd>
-			<dd>Supermercado e drogaria em casa entram aqui.</dd>
-		</dl>
-		<dl>
-			<dt>Carro</dt>
-			<dd>Gastos para usar e manter carro. Por exemplo, lavar e abastecer.</dd>
-			<dd>Revisões e impostos entram aqui.</dd>
-		</dl>
-		<dl>
-			<dt>Misc</dt>
-			<dd>Gastos que podem ser cortados. Por exemplo, manter a prática de esportes, restaurantes
-				para diversão e tv a cabo.</dd>
-			<dd>
-				<strong>Isso não significa que esses gastos não são importantes.</strong>
-			</dd>
-		</dl>
-		<dl>
-			<dt>Ensino</dt>
-			<dd>Gastos relacionados ao aprimoramento de conhecimentos teóricos e profissionais.</dd>
-			<dd>Cursos e materiais para o estudo de concursos entram aqui. Livros para diversão não
-				entram aqui.</dd>
+		<dl ng-repeat="tipo in tipos">
+			<dt>{{tipo.descricao}}</dt>
+			<dd>{{tipo.detalhe}}</dd>
 		</dl>
 	</div>
 
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
