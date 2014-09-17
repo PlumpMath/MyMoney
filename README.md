@@ -16,7 +16,7 @@ Application to control and check spendings.
 
 ## Tests
 
-### Unit tests
+### Unit testing
 
 * Run `npm test`;
 
@@ -24,7 +24,7 @@ It will open an instance of the browser, execute all unit tests and keep listeni
 
 If you want just a single execution of all tests, run `npm run testSinglePass`.
 
-### End to end tests
+### End to end testing
 
 * Run `npm run protractor`;
 
