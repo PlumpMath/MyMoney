@@ -16,15 +16,24 @@
 </head>
 
 <body ng-controller="TipoGastoListCtrl">
-	<div class="container">
+	<div class="container-fluid">
 		<h2>
 			Tipos de gasto <span class="label label-default">{{tipos.length}}</span>
 		</h2>
 
-		<dl ng-repeat="tipo in tipos">
-			<dt>{{tipo.descricao}}</dt>
-			<dd>{{tipo.detalhe}}</dd>
-		</dl>
+		<div class="row">
+			<div class="col-xs-2">
+				<!-- Sidebar content -->
+				Search: <input type="text" ng-model="query">
+			</div>
+			<div class="col-xs-10">
+				<dl ng-repeat="tipo in tipos | filter:query">
+					<dt>{{tipo.descricao}}</dt>
+					<dd>{{tipo.detalhe}}</dd>
+				</dl>
+			</div>
+		</div>
+
 	</div>
 
 	<!-- Bootstrap core JavaScript
