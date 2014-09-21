@@ -1,17 +1,19 @@
-'use strict';
+(function() {
+	'use strict';
 
-exports.config = {
-	allScriptsTimeout : 11000,
+	exports.config = {
+		allScriptsTimeout : 11000,
 
-	specs : [ 'e2e/*.js' ],
+		specs : [ 'e2e/*.js' ],
 
-	chromeOnly : true,
+		chromeOnly : true,
 
-	baseUrl : 'http://localhost:8080/',
+		baseUrl : 'http://localhost:8080/',
 
-	framework : 'jasmine',
+		framework : 'jasmine',
 
-	jasmineNodeOpts : {
-		defaultTimeoutInterval : 30000
-	}
-};
+		jasmineNodeOpts : {
+			defaultTimeoutInterval : 30000
+		}
+	};
+})();
