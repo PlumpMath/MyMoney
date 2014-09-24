@@ -4,8 +4,8 @@ Application to control and check spendings.
 
 ## Prerequisites
 
-* Apache Maven
-* Node.js
+* [Apache Maven](http://maven.apache.org/)
+* [Node.js](http://nodejs.org/)
 
 **Obs: Unless explicitly told otherwise, all comands shown here are supposed to be run at the project's root folder.**
 
