@@ -10,10 +10,10 @@
 	"scripts": {
     	"postinstall": "bower install",
 
-		"test": "node node_modules/karma/bin/karma start src/test/resources/webapp/karma.conf.js",
-		"testSinglePass": "node node_modules/karma/bin/karma start src/test/resources/webapp/karma.conf.js --single-run",
+		"test": "node node_modules/karma/bin/karma start src/test/webapp/karma.conf.js",
+		"testSinglePass": "node node_modules/karma/bin/karma start src/test/webapp/karma.conf.js --single-run",
 
 		"preprotractor": "webdriver-manager update",
-		"protractor": "protractor src/test/resources/webapp/protractor.conf.js"
+		"protractor": "protractor src/test/webapp/protractor.conf.js"
     }
 }
