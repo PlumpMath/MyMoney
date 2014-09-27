@@ -1,0 +1,23 @@
+<div class="container-fluid">
+	<h2>
+		Tipos de gasto <span class="label label-default">{{tipos.length}}</span>
+	</h2>
+
+	<div class="row">
+		<div class="col-md-2">
+			<!-- Sidebar content -->
+			Search: <input type="text" ng-model="query">
+			Sort by:
+			<select ng-model="orderProp">
+				<option value="descricao">Nome</option>
+				<option value="detalhe">Descrição</option>
+			</select>
+		</div>
+		<div class="col-md-10">
+			<dl ng-repeat="tipo in tipos | filter:query | orderBy:orderProp">
+				<dt>{{tipo.descricao}}</dt>
+				<dd>{{tipo.detalhes}}</dd>
+			</dl>
+		</div>
+	</div>
+</div>

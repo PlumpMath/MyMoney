@@ -3,13 +3,15 @@
 
 	/* Controllers */
 
-	var myMoneyApp = angular.module('myMoneyApp', []);
+	var myMoneyControllers = angular.module('myMoneyControllers', []);
 
-	myMoneyApp.controller('TipoGastoListCtrl', [ '$scope', '$http', function($scope, $http) {
-		$http.get('rest/tipos').success(function(data) {
-			$scope.tipos = data;
-		});
+	myMoneyControllers.controller('TipoGastoListCtrl', [ '$scope', '$http',
+			function($scope, $http) {
+				$http.get('rest/tipos').success(function(data) {
+					$scope.tipos = data;
+				});
 
-		$scope.orderProp = 'descricao';
-	} ]);
+				$scope.orderProp = 'descricao';
+			} ]);
+
 })();

@@ -8,6 +8,7 @@
 
 			files : [ 'main/webapp/bower_components/angular/angular.js',
 					'main/webapp/bower_components/angular-mocks/angular-mocks.js',
+					'main/webapp/bower_components/angular-route/angular-route.js',
 					'main/webapp/js/**/*.js', 'test/webapp/unit/**/*.js' ],
 
 			autoWatch : true,
