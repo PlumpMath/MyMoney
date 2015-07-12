@@ -1,4 +1,4 @@
-package com.fasfsfgs.enums;
+package com.fasfsfgs.mymoney.enums;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
